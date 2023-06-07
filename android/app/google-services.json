@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1033619796797",
+    "project_id": "flexme-ng",
+    "storage_bucket": "flexme-ng.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033619796797:android:242811ac8e7d69dfd64b54",
+        "android_client_info": {
+          "package_name": "com.example.flex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033619796797-8ldccvlq1umsil47rkd337vperf4c0o7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUA_cCXeG2p9G3D2zj6zQUV-Ze8K_Kt9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033619796797-8ldccvlq1umsil47rkd337vperf4c0o7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
