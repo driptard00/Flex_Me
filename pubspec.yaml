@@ -41,10 +41,12 @@ dependencies:
   flutter_secure_storage: ^7.0.1
   awesome_card: ^1.1.7
   rive: ^0.10.1
-  dio: ^5.1.2
+  dio: ^4.0.6
   fluttertoast: ^8.2.2
   pin_code_fields: ^7.4.0
   firebase_core: ^2.13.0
+  image_picker: ^0.8.7+5
+  cloudinary_sdk: ^4.0.2+10
 
 dev_dependencies:
   flutter_test:

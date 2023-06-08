@@ -13,6 +13,7 @@ String verifyRegisterOtpRoute = "/auth/verify/otp"; // VERIFY REGISTER OTP ROUTE
 String verifyPasswordOtpRoute = "/auth/verify/password"; // VERIFY PASSWORD OTP ROUTE
 String usernameValidationRoute = "/auth/username"; // USERNAME VALIDATION ROUTE
 String createPinRoute = "/pin/"; // CREATE PIN ROUTE
+String confirmPinRoute = "/pin/"; // CONFIRM PIN ROUTE
 
 // =========== PROFILE ROUTES ==============
 String getProfileRoute = "/profile";
@@ -20,3 +21,9 @@ String updateProfileRoute = "/profile";
 String updatePasswordRoute = "/profile/password";
 String addPhoneRoute = "/profile/phone";
 String addImageRoute = "/profile/image";
+
+// =========== PAYMENT ROUTES ==========
+String getAllBanksRoute = "/bank";
+String verifyAccountNumberRoute = "/bank/verify";
+String triggerTransferRoute = "/bank/transfer";
+String withdrawalRoute = "/bank/withdraw";

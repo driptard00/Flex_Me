@@ -10,8 +10,7 @@ import 'TabViews/sent_view.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
-
-
+  
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -34,24 +33,30 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            const CircleAvatar(
-                              radius: 25,
-                              backgroundImage: AssetImage("images/profileAvatar.webp")
-                            ),
+                          CircleAvatar(
+                            radius: 25,
+                            backgroundImage: (controller.user.image != null)?
+                            NetworkImage(controller.user.image)
+                            :
+                            (controller.selectedImage != null)?
+                            FileImage(controller.selectedImage!)
+                            :
+                            const AssetImage("images/profileAvatar.webp") as ImageProvider,
+                          ),
                             const SizedBox(width: 5,),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  "Jerry Ezek",
-                                  style: TextStyle(
+                                Text(
+                                  controller.user.name!,
+                                  style: const TextStyle(
                                     color: Colors.black,
                                     fontSize: 20,
                                     fontFamily: "PoppinsMedium"
                                   ),
                                 ),
                                 Text(
-                                  "@Jerrym1",
+                                  "@${controller.user.username}",
                                   style: TextStyle(
                                       color: const Color(0xff454ADE).withOpacity(0.8),
                                       fontSize: 15,
@@ -108,7 +113,7 @@ class HomeScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(50)
                             ),
                             child: Text(
-                              "N${(controller.hideBalance) ? ("****") : ("1000.95")}",
+                              "N${(controller.hideBalance) ? ("****") : ("${controller.user.wallet!.amount}")}",
                               style: TextStyle(
                                 color: (controller.selectedColor == 2)?
                                   (
@@ -146,7 +151,7 @@ class HomeScreen extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          "${(controller.hideBalance) ? ("**") : ("8")} swipps sent",
+                          "${(controller.hideBalance) ? ("**") : ("${controller.user.wallet!.outflow}")} swipps sent",
                           style: const TextStyle(
                               color: Colors.black,
                               fontSize: 15,
@@ -155,7 +160,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                         const SizedBox(width: 20,),
                         Text(
-                          "${(controller.hideBalance) ? ("**") : ("14")} swipps recieved",
+                          "${(controller.hideBalance) ? ("**") : ("${controller.user.wallet!.inflow}")} swipps recieved",
                           style: const TextStyle(
                               color: Colors.black,
                               fontSize: 15,

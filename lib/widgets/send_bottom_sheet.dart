@@ -10,9 +10,9 @@ class SendBottomSheet{
       GetBuilder<AppStateController>(
         builder: (controller) {
           return Padding(
-            padding: const EdgeInsets.all(30),
+            padding: const EdgeInsets.all(10),
             child: Container(
-              height: 200,
+              height: 300,
               width: Get.width,
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               decoration: BoxDecoration(
@@ -32,7 +32,7 @@ class SendBottomSheet{
                   const SizedBox(height: 30,),
                   ListTile(
                     onTap: (() {
-                      Get.toNamed(sendManually);
+                      Get.toNamed(bankTranserScreen);
                     }),
                     leading: const Icon(
                       Iconsax.send_1,
@@ -40,12 +40,12 @@ class SendBottomSheet{
                       color: Colors.black,
                     ),
                     title: const Text(
-                      "Send Manually"
+                      "Bank Transfer"
                     ),
                   ),
                   ListTile(
                     onTap: (() {
-                      Get.toNamed(sendContactlessly);
+                      Get.toNamed(usernameTransferScreen);
                     }),
                     leading: const Icon(
                       Icons.contactless_outlined,
@@ -53,9 +53,22 @@ class SendBottomSheet{
                       color: Colors.black,
                     ),
                     title: const Text(
-                      "Send Contactlessly"
+                      "Username Transfers"
                     ),
-                  )
+                  ),
+                  ListTile(
+                    onTap: (() {
+                      Get.toNamed(sendContactlesslyScreen);
+                    }),
+                    leading: const Icon(
+                      Icons.contactless_outlined,
+                      size: 25,
+                      color: Colors.black,
+                    ),
+                    title: const Text(
+                      "Contactless Payments"
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -7,9 +7,6 @@ import 'package:flex/screens/CardsScreens/cardColorScreen.dart';
 import 'package:flex/screens/CardsScreens/createCardScreen.dart';
 import 'package:flex/screens/CardsScreens/editCardColor.dart';
 import 'package:flex/screens/CardsScreens/mangeCardScreen.dart';
-import 'package:flex/screens/MainScreens/HomeScreen/Send/searchPeople.dart';
-import 'package:flex/screens/MainScreens/HomeScreen/Send/sendContactlessly.dart';
-import 'package:flex/screens/MainScreens/HomeScreen/Send/sendManually.dart';
 import 'package:flex/screens/MainScreens/Profile%20Screen/profileScreen.dart';
 import 'package:flex/screens/CardsScreens/virtualCardScreen.dart';
 import 'package:flex/screens/introScreen.dart';
@@ -28,6 +25,9 @@ import '../screens/MainScreens/HomeScreen/Connection/connect_to_send.dart';
 import '../screens/MainScreens/HomeScreen/money_input_screen.dart';
 import '../screens/MainScreens/Settings/settingsScreen.dart';
 import '../screens/MainScreens/holder_screen.dart';
+import '../screens/MainScreens/payments/bankTranserScreen.dart';
+import '../screens/MainScreens/payments/sendContactlesslyScreen.dart';
+import '../screens/MainScreens/payments/usernameTransferScreen.dart';
 import '../screens/SplashScreen/splashScreen.dart';
 
 // ============= APP ROUTES ==============
@@ -169,16 +169,16 @@ List<GetPage> getPages = [
 
   // SEND 
   GetPage(
-      name: sendManually,
-      page: ()=> SendManuallyScreen(),
+      name: bankTranserScreen,
+      page: ()=> BankTransferScreen(),
   ),
   GetPage(
-      name: sendContactlessly,
-      page: ()=> SendContactlessly(),
+      name: usernameTransferScreen,
+      page: ()=> UsernameTransferScreen(),
   ), 
   GetPage(
-      name: searchPeople,
-      page: ()=> SearchPeopleScreen(),
+      name: sendContactlesslyScreen,
+      page: ()=> SendContactlesslyScreen(),
   ), 
   
 ];

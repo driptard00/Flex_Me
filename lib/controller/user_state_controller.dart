@@ -2,6 +2,7 @@ import 'package:flex/routes/app_route_names.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
+import '../models/userModel.dart';
 import '../services/profile_api_services.dart';
 
 class UserStateController extends GetxController {
@@ -11,6 +12,12 @@ class UserStateController extends GetxController {
   String _username = "";
   String _name = "";
   String _phoneNumber = "";
+  TextEditingController _nameController = TextEditingController();
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _usernameController = TextEditingController();
+  TextEditingController _phoneController = TextEditingController();
+
+  User _user = User();
   
   // GETTERS
   bool get isLoading => _isLoading;
@@ -18,6 +25,7 @@ class UserStateController extends GetxController {
   String get username => _username;
   String get name => _name;
   String get phoneNumber => _phoneNumber;
+  User get user => _user;
 
   // SETTERS
   updateIsLoading(value) {
@@ -61,6 +69,10 @@ class UserStateController extends GetxController {
         textColor: Colors.white,
         fontSize: 16.0
       );
+
+      _nameController.text = responseData["data"]["name"];
+      _emailController.text = responseData["data"]["email"];
+      _usernameController.text = responseData["data"]["username"];
 
       Get.toNamed(holderScreen);
 

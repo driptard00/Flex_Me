@@ -1,8 +1,8 @@
-import 'package:flex/controller/auth_state_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../controller/user_state_controller.dart';
+import '../controller/app_state_controller.dart';
+
 
 class GetDetailScreen extends StatefulWidget {
   const GetDetailScreen({super.key});
@@ -10,13 +10,13 @@ class GetDetailScreen extends StatefulWidget {
   @override
   State<GetDetailScreen> createState() => _GetDetailScreenState();
 }
-  final UserStateController _userStateController = Get.put(UserStateController());
+  final AppStateController _appStateController = Get.put(AppStateController());
 
 class _GetDetailScreenState extends State<GetDetailScreen> {
 
   @override
   void initState() {
-    _userStateController.getProfile();
+    _appStateController.getProfile();
     // TODO: implement initState
     super.initState();
   }

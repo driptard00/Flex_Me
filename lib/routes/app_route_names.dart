@@ -54,9 +54,9 @@ String walletScreen = "/walletScreen";
 String profileScreen = "/profileScreen";
 
 // SEND SCREENS
-String sendManually = "/sendManually";
-String sendContactlessly = "/sendContactlessly";
-String searchPeople = "/searchPeople";
+String bankTranserScreen = "/bankTranserScreen";
+String sendContactlesslyScreen = "/sendContactlesslyScreen";
+String usernameTransferScreen = "/usernameTransferScreen";
 
 
 
